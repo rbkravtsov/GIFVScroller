@@ -62,7 +62,6 @@ class UserProfileViewController: UIViewController {
                 }
                 
             }
-            //view.setNeedsDisplay()
         }
     }
     

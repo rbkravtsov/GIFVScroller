@@ -76,7 +76,6 @@ class FeedViewController: UIViewController {
     }
     
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        print("is loading cell - row: \(indexPath.row) current count: \(viewModel.currentCount)")
         return indexPath.row >= viewModel.currentCount
     }
 }
