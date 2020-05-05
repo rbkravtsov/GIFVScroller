@@ -43,4 +43,33 @@ final class TJournalClient {
             completion(Result.success(decodedResponse))
             }).resume()
     }
+    
+    func logIn(with request: UserProfileRequest,
+               token: String,
+               completion: @escaping (Result<UserProfileResponse, DataResponseError>) -> ()) {
+        let urlPath = baseURL.appendingPathComponent(request.path)
+        let urlRequest = URLRequest(url: urlPath)
+        let bodyParameters = ["token": token]
+        var encodedURLRequest = urlRequest.encode(with: nil,
+                                                  bodyParameters:bodyParameters,
+                                                  contentType: "multipart/form-data; boundary=\(NetworkConstants.boundary)")
+        encodedURLRequest.httpMethod = "POST"
+        session.dataTask(with: encodedURLRequest, completionHandler: { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.hasSuccessCode,
+                let data = data
+            else {
+                completion(Result.failure(DataResponseError.network))
+                return
+            }
+            
+            guard let decodedResponse = try? JSONDecoder().decode(UserProfileResponse.self, from: data) else {
+                completion(Result.failure(DataResponseError.decoding))
+                return
+            }
+            
+            completion(Result.success(decodedResponse))
+            }).resume()
+        
+    }
 }

@@ -8,9 +8,19 @@
 
 import Foundation
 
+struct UserProfileResponse: Decodable {
+    let result: UserProfile
+}
+
 struct UserProfile: Decodable {
+    
     let name: String
-    let descriprion: String
     let avatarURL: String
-    let karma: Int
+
+    enum CodingKeys: String, CodingKey {
+        case name
+        case avatarURL = "avatar_url"
+    }
+    
+    
 }

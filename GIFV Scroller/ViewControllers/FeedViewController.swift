@@ -30,6 +30,7 @@ class FeedViewController: UIViewController {
         tableView.allowsSelection = false        
         return tableView
     }()
+    
     // MARK: - Initializers
 
     // MARK: - UIViewController(*)

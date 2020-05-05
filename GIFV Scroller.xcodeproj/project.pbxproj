@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825D2DF1246151BB0049CA41 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D2DF0246151BB0049CA41 /* QRCodeScannerViewController.swift */; };
+		825D2DF3246170620049CA41 /* UserProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D2DF2246170620049CA41 /* UserProfileRequest.swift */; };
 		825E0A402459E49C003B7857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E0A3F2459E49C003B7857 /* AppDelegate.swift */; };
 		825E0A422459E49C003B7857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E0A412459E49C003B7857 /* SceneDelegate.swift */; };
 		825E0A442459E49C003B7857 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E0A432459E49C003B7857 /* FeedViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		825D2DF0246151BB0049CA41 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		825D2DF2246170620049CA41 /* UserProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRequest.swift; sourceTree = "<group>"; };
 		825E0A3C2459E49C003B7857 /* GIFV Scroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIFV Scroller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		825E0A3F2459E49C003B7857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		825E0A412459E49C003B7857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		825E0A542459F987003B7857 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				825E0A6C245C7487003B7857 /* ContentResponse.swift */,
 				825E0A552459F9B0003B7857 /* UserProfile.swift */,
 				825E0A572459FB5F003B7857 /* ContentItem.swift */,
 				825E0A59245A0009003B7857 /* SortingType.swift */,
@@ -130,8 +135,8 @@
 				825E0A61245A205F003B7857 /* TJournalClient.swift */,
 				825E0A6E245C74F1003B7857 /* DataResponseError.swift */,
 				825E0A6A245C7350003B7857 /* Result.swift */,
-				825E0A6C245C7487003B7857 /* ContentResponse.swift */,
 				825E0A63245C5382003B7857 /* ContentRequest.swift */,
+				825D2DF2246170620049CA41 /* UserProfileRequest.swift */,
 				825E0A65245C53C6003B7857 /* NetworkConstants.swift */,
 			);
 			path = Network;
@@ -151,6 +156,7 @@
 			children = (
 				825E0A73245DBCB3003B7857 /* Cells */,
 				825E0A5B245A1367003B7857 /* UserProfileViewController.swift */,
+				825D2DF0246151BB0049CA41 /* QRCodeScannerViewController.swift */,
 				825E0A432459E49C003B7857 /* FeedViewController.swift */,
 				825E0A452459E49C003B7857 /* Main.storyboard */,
 			);
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825D2DF3246170620049CA41 /* UserProfileRequest.swift in Sources */,
 				825E0A562459F9B0003B7857 /* UserProfile.swift in Sources */,
 				825E0A6B245C7350003B7857 /* Result.swift in Sources */,
 				825E0A442459E49C003B7857 /* FeedViewController.swift in Sources */,
@@ -253,6 +260,7 @@
 				825E0A75245DBCC3003B7857 /* ContentCell.swift in Sources */,
 				825E0A422459E49C003B7857 /* SceneDelegate.swift in Sources */,
 				825E0A69245C6B9C003B7857 /* URLRequest+Encode.swift in Sources */,
+				825D2DF1246151BB0049CA41 /* QRCodeScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
